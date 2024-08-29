@@ -15,6 +15,7 @@ body {
     padding: 10px 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     position: fixed;
     top: 0;
@@ -37,7 +38,7 @@ body {
 /* تصميم الأقسام */
 .section {
     display: none;
-    margin-top: 60px; /* لإضافة مسافة تحت القائمة العلوية */
+    margin-top: 70px; /* لإضافة مسافة تحت القائمة العلوية */
     padding: 20px;
 }
 
@@ -54,8 +55,28 @@ button {
     font-size: 16px;
     cursor: pointer;
     margin: 10px 0;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #d18b00;
+}
+
+/* تحسين تصميم عناصر المتصدرين */
+.counter-container, #leaderboard {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px auto;
+    color: #333;
+}
+
+.counter-container h2, #leaderboard h2 {
+    color: #333;
+}
+
+#score {
+    font-size: 20px;
+    margin: 10px 0;
 }
