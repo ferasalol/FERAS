@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عداد النقاط</title>
+    <title>عداد النقاط مع قائمة البداية</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- عداد النقاط -->
-    <div class="counter-container">
-        <h1>عداد النقاط</h1>
-        <p id="points">النقاط: 0</p>
-        <button onclick="increasePoints()">زيادة النقاط</button>
-    </div>
-
-    <!-- قائمة المتصدرين -->
-    <div class="leaderboard">
-        <h2>قائمة المتصدرين</h2>
-        <ul id="leaderboard-list">
-            <!-- سيتم إضافة المتصدرين هنا بواسطة JavaScript -->
+    <!-- قائمة البداية -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">عداد النقاط</a></li>
+            <li><a href="#">المتصدرون</a></li>
+            <li><a href="#">حول</a></li>
         </ul>
-    </div>
+    </nav>
+
+    <!-- قسم العداد والنقاط -->
+    <main class="main-content">
+        <div class="counter-container">
+            <h1>عداد النقاط</h1>
+            <input type="text" id="username" placeholder="أدخل اسم المستخدم">
+            <p id="points">النقاط: 0</p>
+            <button onclick="increasePoints()">زيادة النقاط</button>
+        </div>
+
+        <!-- قائمة المتصدرين -->
+        <div class="leaderboard">
+            <h2>قائمة المتصدرين</h2>
+            <ul id="leaderboard-list">
+                <!-- سيتم إضافة المتصدرين هنا بواسطة JavaScript -->
+            </ul>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
