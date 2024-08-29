@@ -3,41 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عداد النقاط مع قائمة البداية</title>
-    <link rel="stylesheet" href="style.css">
+    <title>لعبة النقاط</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- قائمة التنقل -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">عداد النقاط</a></li>
-            <li><a href="#">المتصدرون</a></li>
-            <li><a href="#">حول</a></li>
-        </ul>
-    </nav>
-
-    <!-- قسم العداد والنقاط -->
-    <main class="main-content">
-        <div class="counter-container">
-            <h1>عداد النقاط</h1>
-            <input type="text" id="username" placeholder="أدخل اسم المستخدم">
-            <p id="points">النقاط: 0</p>
-            <button onclick="increasePoints()">زيادة النقاط</button>
+    <!-- قائمة البداية -->
+    <div id="home" class="section">
+        <div class="navbar">
+            <a href="#" onclick="showSection('home')"><img src="home_icon.png" alt="المنزل" class="home-icon"></a>
         </div>
+        <h1>مرحباً بك في اللعبة</h1>
+        <button onclick="startGame()">ابدأ اللعب</button>
+        <button onclick="showSection('leaderboard')">عرض المتصدرين</button>
+    </div>
 
-        <!-- قائمة المتصدرين -->
-        <div class="leaderboard">
-            <h2>قائمة المتصدرين</h2>
-            <ul id="leaderboard-list">
-                <!-- سيتم إضافة المتصدرين هنا بواسطة JavaScript -->
-            </ul>
+    <!-- قسم اللعب -->
+    <div id="game" class="section" style="display:none;">
+        <div class="navbar">
+            <a href="#" onclick="showSection('home')"><img src="home_icon.png" alt="المنزل" class="home-icon"></a>
         </div>
-    </main>
+        <div class="main-content">
+            <div class="counter-container">
+                <h2>عداد النقاط</h2>
+                <input type="text" id="playerName" placeholder="أدخل اسمك">
+                <p id="score">النقاط: 0</p>
+                <button onclick="increasePoints()">زيادة النقاط</button>
+            </div>
+        </div>
+    </div>
 
-    <footer class="footer">
-        <p>جميع الحقوق محفوظة &copy; 2024</p>
-    </footer>
+    <!-- قائمة المتصدرين -->
+    <div id="leaderboard" class="section" style="display:none;">
+        <div class="navbar">
+            <a href="#" onclick="showSection('home')"><img src="home_icon.png" alt="المنزل" class="home-icon"></a>
+        </div>
+        <h2>قائمة المتصدرين</h2>
+        <ul id="leaderboardList"></ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
