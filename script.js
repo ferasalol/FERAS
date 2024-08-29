@@ -1,19 +1,30 @@
-let points = 0; // المتغير لحفظ عدد النقاط
 let leaderboard = {}; // كائن لحفظ نقاط المتصدرين
 
 // دالة لزيادة النقاط
 function increasePoints() {
-    points++; // زيادة النقاط بمقدار 1
-    document.getElementById('points').innerText = `النقاط: ${points}`; // تحديث عرض النقاط
+    const usernameInput = document.getElementById('username');
+    const username = usernameInput.value.trim(); // الحصول على اسم المستخدم وإزالة المسافات الزائدة
+
+    if (username === "") {
+        alert("يرجى إدخال اسم المستخدم!");
+        return;
+    }
+
+    // تحديث النقاط للمستخدم
+    if (!leaderboard[username]) {
+        leaderboard[username] = 0; // إذا لم يكن المستخدم موجودًا، إنشاء مستخدم جديد في القائمة
+    }
+    leaderboard[username]++; // زيادة النقاط للمستخدم
+
+    // تحديث عرض النقاط
+    document.getElementById('points').innerText = `النقاط: ${leaderboard[username]}`;
 
     // تحديث قائمة المتصدرين
-    updateLeaderboard("المستخدم", points);
+    updateLeaderboard();
 }
 
 // دالة لتحديث قائمة المتصدرين
-function updateLeaderboard(username, points) {
-    leaderboard[username] = points; // تحديث نقاط المستخدم
-
+function updateLeaderboard() {
     const leaderboardList = document.getElementById('leaderboard-list');
     leaderboardList.innerHTML = ''; // مسح القائمة الحالية
 
