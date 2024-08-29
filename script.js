@@ -1,40 +1,19 @@
-let leaderboard = {}; // كائن لحفظ نقاط المتصدرين
-
-// دالة لزيادة النقاط
-function increasePoints() {
-    const usernameInput = document.getElementById('username');
-    const username = usernameInput.value.trim(); // الحصول على اسم المستخدم وإزالة المسافات الزائدة
-
-    if (username === "") {
-        alert("يرجى إدخال اسم المستخدم!");
-        return;
-    }
-
-    // تحديث النقاط للمستخدم
-    if (!leaderboard[username]) {
-        leaderboard[username] = 0; // إذا لم يكن المستخدم موجودًا، إنشاء مستخدم جديد في القائمة
-    }
-    leaderboard[username]++; // زيادة النقاط للمستخدم
-
-    // تحديث عرض النقاط
-    document.getElementById('points').innerText = `النقاط: ${leaderboard[username]}`;
-
-    // تحديث قائمة المتصدرين
-    updateLeaderboard();
+// عرض الأقسام المختلفة بناءً على الزر الذي يتم الضغط عليه
+function showSection(sectionId) {
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('game').style.display = 'none';
+    document.getElementById('leaderboard').style.display = 'none';
+    document.getElementById(sectionId).style.display = 'block';
 }
 
-// دالة لتحديث قائمة المتصدرين
-function updateLeaderboard() {
-    const leaderboardList = document.getElementById('leaderboard-list');
-    leaderboardList.innerHTML = ''; // مسح القائمة الحالية
+// بدء اللعب والانتقال إلى قسم اللعبة
+function startGame() {
+    showSection('game');
+}
 
-    // ترتيب المتصدرين حسب النقاط
-    const sortedLeaderboard = Object.entries(leaderboard).sort((a, b) => b[1] - a[1]);
-
-    // إضافة العناصر المحدثة للقائمة
-    sortedLeaderboard.forEach(([user, points]) => {
-        const listItem = document.createElement('li');
-        listItem.innerText = `${user}: ${points} نقاط`;
-        leaderboardList.appendChild(listItem);
-    });
+// زيادة النقاط
+function increasePoints() {
+    let scoreElement = document.getElementById('score');
+    let currentScore = parseInt(scoreElement.textContent.split(": ")[1]);
+    scoreElement.textContent = 'النقاط: ' + (currentScore + 1);
 }
