@@ -9,12 +9,108 @@ body {
     color: #fff; /* نص أبيض لضمان القراءة الواضحة فوق الخلفية الداكنة */
 }
 
-/* بقية الكود يبقى كما هو، لتصميم الموقع */
-
 /* تصميم القائمة العلوية */
 .navbar {
     background-color: rgba(51, 51, 51, 0.8); /* خلفية شفافة للقائمة */
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-/* تابع استخدام نفس الشفافية وتأثيرات الألوان لبقية العناصر */
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f0a500;
+}
+
+/* تصميم المحتوى الرئيسي */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 80px; /* ترك مساحة تحت القائمة الثابتة */
+    padding: 20px;
+}
+
+.counter-container, .leaderboard {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 90%; /* لتصغير العرض على الشاشات الصغيرة */
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #f0a500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d18b00;
+}
+
+/* تصميم قائمة المتصدرين */
+.leaderboard ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.leaderboard ul li {
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* تصميم التذييل */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
