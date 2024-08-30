@@ -1,19 +1,45 @@
-// عرض الأقسام المختلفة بناءً على الزر الذي يتم الضغط عليه
-function showSection(sectionId) {
-    document.getElementById('home').style.display = 'none';
-    document.getElementById('game').style.display = 'none';
-    document.getElementById('leaderboard').style.display = 'none';
-    document.getElementById(sectionId).style.display = 'block';
-}
+let score = 0;
+let leaderboard = [];
 
-// بدء اللعب والانتقال إلى قسم اللعبة
 function startGame() {
     showSection('game');
 }
 
-// زيادة النقاط
+function showSection(sectionId) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+}
+
 function increasePoints() {
-    let scoreElement = document.getElementById('score');
-    let currentScore = parseInt(scoreElement.textContent.split(": ")[1]);
-    scoreElement.textContent = 'النقاط: ' + (currentScore + 1);
+    const playerName = document.getElementById('playerName').value;
+    score++;
+    document.getElementById('score').innerText = `النقاط: ${score}`;
+
+    if (playerName) {
+        updateLeaderboard(playerName, score);
+    }
+}
+
+function updateLeaderboard(playerName, score) {
+    const playerIndex = leaderboard.findIndex(player => player.name === playerName);
+    if (playerIndex !== -1) {
+        leaderboard[playerIndex].score = score;
+    } else {
+        leaderboard.push({ name: playerName, score: score });
+    }
+
+    renderLeaderboard();
+}
+
+function renderLeaderboard() {
+    const leaderboardList = document.getElementById('leaderboardList');
+    leaderboardList.innerHTML = '';
+
+    leaderboard.sort((a, b) => b.score - a.score).forEach(player => {
+        const listItem = document.createElement('li');
+        listItem.innerText = `${player.name}: ${player.score} نقاط`;
+        leaderboardList.appendChild(listItem);
+    });
 }
