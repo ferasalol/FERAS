@@ -83,6 +83,16 @@ button:hover {
     margin: 10px 0;
 }
 
+#leaderboardList {
+    list-style: none;
+    padding: 0;
+}
+
+#leaderboardList li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
 /* تحسين استجابة التصميم للشاشات المختلفة */
 @media (max-width: 768px) {
     .counter-container, #leaderboard {
