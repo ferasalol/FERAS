@@ -1,8 +1,7 @@
 /* إعدادات عامة للصفحة */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('/mnt/data/59b2349684d902730f710b65f05ecb80.gif') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #007bff; /* خلفية الموقع باللون الأزرق */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -22,17 +21,11 @@ body {
     z-index: 1000;
 }
 
-.navbar a {
+.navbar .back-button {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     margin: 0 15px;
-}
-
-.home-icon {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
 }
 
 /* تصميم الأقسام */
@@ -63,8 +56,17 @@ button:hover {
 }
 
 /* تحسين تصميم عناصر المتصدرين */
-.counter-container, #leaderboard {
-    background-color: rgba(255, 255, 255, 0.8);
+.counter-container {
+    background-color: rgba(255, 0, 0, 0.8); /* خلفية باللون الأحمر لمنطقة النقاط */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px auto;
+    color: #fff;
+}
+
+#leaderboard {
+    background-color: rgba(0, 255, 0, 0.8); /* خلفية باللون الأخضر لقائمة المتصدرين */
     border-radius: 10px;
     padding: 20px;
     max-width: 300px;
@@ -73,10 +75,29 @@ button:hover {
 }
 
 .counter-container h2, #leaderboard h2 {
-    color: #333;
+    color: #fff;
 }
 
 #score {
     font-size: 20px;
     margin: 10px 0;
+}
+
+/* تحسين استجابة التصميم للشاشات المختلفة */
+@media (max-width: 768px) {
+    .counter-container, #leaderboard {
+        max-width: 90%;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 769px) {
+    .counter-container, #leaderboard {
+        max-width: 300px;
+    }
 }
