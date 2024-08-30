@@ -9,16 +9,13 @@
 <body>
     <!-- قائمة البداية -->
     <div id="home" class="section">
-        <div class="navbar">
-            <a href="#" onclick="showSection('home')" class="back-button">رجوع</a>
-        </div>
         <h1>مرحباً بك في اللعبة</h1>
         <button onclick="startGame()">ابدأ اللعب</button>
         <button onclick="showSection('leaderboard')">عرض المتصدرين</button>
     </div>
 
     <!-- قسم اللعب -->
-    <div id="game" class="section" style="display:none;">
+    <div id="game" class="section">
         <div class="navbar">
             <a href="#" onclick="showSection('home')" class="back-button">رجوع</a>
         </div>
@@ -33,7 +30,7 @@
     </div>
 
     <!-- قائمة المتصدرين -->
-    <div id="leaderboard" class="section" style="display:none;">
+    <div id="leaderboard" class="section">
         <div class="navbar">
             <a href="#" onclick="showSection('home')" class="back-button">رجوع</a>
         </div>
