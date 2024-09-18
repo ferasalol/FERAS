@@ -124,6 +124,36 @@ nav ul li a {
     background-color: #1b5bff;
 }
 
+/* إشعار السلة */
+.cart-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4b4b;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+.cart-notification button {
+    background-color: white;
+    color: #ff4b4b;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.cart-notification button:hover {
+    background-color: #ff1b1b;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
 .contact-section {
     background-color: #4b7bff;
     color: white;
