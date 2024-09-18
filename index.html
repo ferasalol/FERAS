@@ -35,18 +35,24 @@
     <section id="products" class="products-section">
         <h2>منتجاتنا</h2>
         <div class="product-card">
-            <img src="egg1.jpg" alt="بيض طبيعي">
+            <img src="https://via.placeholder.com/250x150?text=%D8%A8%D9%8A%D8%B6+%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A" alt="بيض طبيعي">
             <h3>بيض طبيعي</h3>
             <p>طازج ومغذى بالأعشاب</p>
-            <button>أضف إلى السلة</button>
+            <button onclick="addToCart()">أضف إلى السلة</button>
         </div>
         <div class="product-card">
-            <img src="egg2.jpg" alt="بيض بلدي">
+            <img src="https://via.placeholder.com/250x150?text=%D8%A8%D9%8A%D8%B6+%D8%A8%D9%84%D8%AF%D9%8A" alt="بيض بلدي">
             <h3>بيض بلدي</h3>
             <p>من مزارعنا المحلية</p>
-            <button>أضف إلى السلة</button>
+            <button onclick="addToCart()">أضف إلى السلة</button>
         </div>
-        <!-- أضف المزيد من المنتجات هنا -->
+        <!-- المزيد من المنتجات -->
+    </section>
+
+    <!-- إشعار السلة -->
+    <section id="cart-notification" class="cart-notification hidden">
+        <p>تم إضافة المنتج إلى السلة بنجاح!</p>
+        <button onclick="closeNotification()">إغلاق</button>
     </section>
 
     <!-- صفحة تواصل معنا -->
@@ -62,5 +68,7 @@
             <a href="#">فيسبوك</a> | <a href="#">تويتر</a> | <a href="#">إنستجرام</a>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
