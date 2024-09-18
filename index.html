@@ -3,41 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لعبة النقاط</title>
+    <title>موقع بيع البيض</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- قائمة البداية -->
-    <div id="home" class="section">
-        <h1>مرحباً بك في اللعبة</h1>
-        <button onclick="startGame()">ابدأ اللعب</button>
-        <button onclick="showSection('leaderboard')">عرض المتصدرين</button>
-    </div>
-
-    <!-- قسم اللعب -->
-    <div id="game" class="section">
-        <div class="navbar">
-            <a href="#" onclick="showSection('home')" class="back-button">رجوع</a>
+    <!-- شريط العنوان -->
+    <header>
+        <div class="logo">
+            <h1>موقع بيع البيض</h1>
         </div>
-        <div class="main-content">
-            <div class="counter-container">
-                <h2>عداد النقاط</h2>
-                <input type="text" id="playerName" placeholder="أدخل اسمك">
-                <p id="score">النقاط: 0</p>
-                <button onclick="increasePoints()">زيادة النقاط</button>
-            </div>
-        </div>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="#login">تسجيل الدخول</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- قائمة المتصدرين -->
-    <div id="leaderboard" class="section">
-        <div class="navbar">
-            <a href="#" onclick="showSection('home')" class="back-button">رجوع</a>
+    <!-- بانر رئيسي -->
+    <section class="banner">
+        <div class="banner-content">
+            <h2>أفضل أنواع البيض الطازج</h2>
+            <p>توصيل سريع لكل المناطق!</p>
+            <a href="#products" class="cta-button">اكتشف المنتجات</a>
         </div>
-        <h2>قائمة المتصدرين</h2>
-        <ul id="leaderboardList"></ul>
-    </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- أقسام المنتجات -->
+    <section id="products" class="products-section">
+        <h2>منتجاتنا</h2>
+        <div class="product-card">
+            <img src="egg1.jpg" alt="بيض طبيعي">
+            <h3>بيض طبيعي</h3>
+            <p>طازج ومغذى بالأعشاب</p>
+            <button>أضف إلى السلة</button>
+        </div>
+        <div class="product-card">
+            <img src="egg2.jpg" alt="بيض بلدي">
+            <h3>بيض بلدي</h3>
+            <p>من مزارعنا المحلية</p>
+            <button>أضف إلى السلة</button>
+        </div>
+        <!-- أضف المزيد من المنتجات هنا -->
+    </section>
+
+    <!-- صفحة تواصل معنا -->
+    <section id="contact" class="contact-section">
+        <h2>تواصل معنا</h2>
+        <p>لأي استفسارات أو طلبات خاصة، تواصل معنا عبر البريد الإلكتروني أو الهاتف.</p>
+    </section>
+
+    <!-- الصفحة السفلية -->
+    <footer>
+        <p>&copy; 2024 موقع بيع البيض. جميع الحقوق محفوظة.</p>
+        <div class="social-media">
+            <a href="#">فيسبوك</a> | <a href="#">تويتر</a> | <a href="#">إنستجرام</a>
+        </div>
+    </footer>
 </body>
 </html>
