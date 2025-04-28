@@ -1,74 +1,64 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع بيع البيض</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تصاميم ديسكورد احترافية</title>
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #4f46e5;
+      color: white;
+      padding: 40px 20px;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .gallery img {
+      width: 300px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+    .button {
+      background-color: #4f46e5;
+      color: white;
+      padding: 15px 30px;
+      margin-top: 20px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #4338ca;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- شريط العنوان -->
-    <header>
-        <div class="logo">
-            <h1>موقع بيع البيض</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#products">المنتجات</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
-                <li><a href="#login">تسجيل الدخول</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- بانر رئيسي -->
-    <section class="banner">
-        <div class="banner-content">
-            <h2>أفضل أنواع البيض الطازج</h2>
-            <p>توصيل سريع لكل المناطق!</p>
-            <a href="#products" class="cta-button">اكتشف المنتجات</a>
-        </div>
-    </section>
+<header>
+  <h1>تصاميم ديسكورد احترافية</h1>
+  <p>أصنع لك أفضل بكجات ديسكورد بجودة عالية وأسعار منافسة!</p>
+</header>
 
-    <!-- أقسام المنتجات -->
-    <section id="products" class="products-section">
-        <h2>منتجاتنا</h2>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/250x150?text=%D8%A8%D9%8A%D8%B6+%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A" alt="بيض طبيعي">
-            <h3>بيض طبيعي</h3>
-            <p>طازج ومغذى بالأعشاب</p>
-            <button onclick="addToCart()">أضف إلى السلة</button>
-        </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/250x150?text=%D8%A8%D9%8A%D8%B6+%D8%A8%D9%84%D8%AF%D9%8A" alt="بيض بلدي">
-            <h3>بيض بلدي</h3>
-            <p>من مزارعنا المحلية</p>
-            <button onclick="addToCart()">أضف إلى السلة</button>
-        </div>
-        <!-- المزيد من المنتجات -->
-    </section>
+<section>
+  <h2>أعمالي</h2>
+  <div class="gallery">
+    <img src="your-image1.png" alt="تصميم 1">
+    <img src="your-image2.png" alt="تصميم 2">
+    <img src="your-image3.png" alt="تصميم 3">
+  </div>
+  <a class="button" href="https://discord.com/users/رقم_الاي دي_الخاص_بك" target="_blank">اطلب الآن عبر ديسكورد</a>
+</section>
 
-    <!-- إشعار السلة -->
-    <section id="cart-notification" class="cart-notification hidden">
-        <p>تم إضافة المنتج إلى السلة بنجاح!</p>
-        <button onclick="closeNotification()">إغلاق</button>
-    </section>
-
-    <!-- صفحة تواصل معنا -->
-    <section id="contact" class="contact-section">
-        <h2>تواصل معنا</h2>
-        <p>لأي استفسارات أو طلبات خاصة، تواصل معنا عبر البريد الإلكتروني أو الهاتف.</p>
-    </section>
-
-    <!-- الصفحة السفلية -->
-    <footer>
-        <p>&copy; 2024 موقع بيع البيض. جميع الحقوق محفوظة.</p>
-        <div class="social-media">
-            <a href="#">فيسبوك</a> | <a href="#">تويتر</a> | <a href="#">إنستجرام</a>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
